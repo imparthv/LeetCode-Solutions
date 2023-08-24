@@ -1,1 +1,2 @@
 # LeetCode-Solutions
+Welcome to the LeetCode Solutions repository! This repository contains my solutions to various LeetCode problems. Each problem solution is organized into its own directory, with the problem number and a brief description. Feel free to explore the solutions and learn from them. If you find any issues or have suggestions for improvements, please don't hesitate to open an issue or submit a pull request.
