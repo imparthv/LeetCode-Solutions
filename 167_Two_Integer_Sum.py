@@ -1,12 +1,16 @@
-# 167. Two Sum II - Input Array is Sorted
-def twoSum(numbers, target):
-    ans_list = []
-    for index_val in range(0,  len(numbers)):
-        target_val = target - numbers[index_val]
-        if target_val in numbers[index_val+1:]:
-            ans_list.append(index_val + 1)
-            ans_list.append(numbers.index(target_val, index_val+1) + 1)
-            break
-    return ans_list
-
-print(twoSum([3,4,5,6], 10))
+class Solution:
+    def twoSum(self, numbers: list[int], target: int) -> list[int]:
+        pointer_1 = 0
+        pointer_2 = len(numbers) - 1
+        while pointer_1 < pointer_2:
+            value = numbers[pointer_1] + numbers[pointer_2]
+            if value == target:
+                return [pointer_1+1, pointer_2+1]
+            elif value > target:
+                pointer_2 -= 1
+            else:
+                pointer_1 +=1
+        return [-1, -1]
+    
+test_case = Solution()
+print(test_case.twoSum([2,3,4], 7))
